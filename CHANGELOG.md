@@ -1,3 +1,10 @@
+# 25.6.2 — إصلاحات تشغيل ونشر
+
+- `vite.config.js`: `base: './'` لدعم GitHub Pages تحت مسار المشروع.
+- `supabase-config.js`: تهيئة أقوى لعميل Supabase (window.supabase + إعادة محاولة).
+- تكوين الحضور (`attendance-composition` / `teacher-daily`): عدم إيقاف التطبيق بالكامل عند فشل التركيب — تسجيل خطأ فقط.
+- الإصدار: 25.6.2
+
 # STEP 53 — Supabase New Project Bootstrap & Verification
 
 - Added idempotent Supabase bootstrap and verification SQL.

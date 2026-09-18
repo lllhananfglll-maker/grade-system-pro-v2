@@ -1,6 +1,6 @@
 {
   "name": "grade-system-pro",
-  "version": "25.6.1",
+  "version": "25.6.2",
   "description": "نظام رصد درجات أعمال السنة - Pro (offline-first SPA)",
   "private": true,
   "type": "module",
