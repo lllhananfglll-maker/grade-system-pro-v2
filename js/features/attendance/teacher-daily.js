@@ -10,7 +10,10 @@
   // STEP 14: the feature receives its capabilities from the composition root.
   const attendanceService = GSP.application && GSP.application.attendance;
   const ctx = GSP.application && GSP.application.attendanceContext;
-  if (!attendanceService || !ctx) throw new Error('Teacher Daily Attendance: attendance application is not composed');
+  if (!attendanceService || !ctx) {
+    console.error('Teacher Daily Attendance: attendance application is not composed');
+    return;
+  }
 
   const esc = ctx.escapeHtml;
   const currentTeacher = ctx.currentTeacher;

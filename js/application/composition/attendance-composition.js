@@ -11,15 +11,18 @@
   const infra = GSP.infrastructure && GSP.infrastructure.repositories;
   const services = GSP.application && GSP.application.services;
   if (!infra || typeof infra.createAttendanceRepository !== 'function') {
-    throw new Error('Attendance composition: repository factory is unavailable');
+    console.error('Attendance composition: repository factory is unavailable');
+    return;
   }
   if (!services || typeof services.createAttendanceService !== 'function') {
-    throw new Error('Attendance composition: service factory is unavailable');
+    console.error('Attendance composition: service factory is unavailable');
+    return;
   }
 
   const ports = GSP.application && GSP.application.ports;
   if (!ports || typeof ports.createAttendanceLegacyBoundary !== 'function') {
-    throw new Error('Attendance composition: legacy boundary is unavailable');
+    console.error('Attendance composition: legacy boundary is unavailable');
+    return;
   }
   const legacy = ports.createAttendanceLegacyBoundary();
   const resolve = (name, fallback) => {
